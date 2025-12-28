@@ -159,9 +159,15 @@ export default function Leaderboard() {
                                 <div key={user.username} className="grid grid-cols-4 p-4 border-b border-white/5 hover:bg-white/5 transition-colors items-center animate-in fade-in slide-in-from-bottom-2">
                                     <div className="pl-4 font-bold text-white capitalize">{user.username}</div>
                                     <div className="flex justify-center">
-                                        <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-mono font-bold">
-                                            {guessed}
-                                        </span>
+                                        {guessed === 0 ? (
+                                            <span className="bg-red-500/20 text-red-300 px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter whitespace-nowrap border border-red-500/30">
+                                                you are not a homie dwag
+                                            </span>
+                                        ) : (
+                                            <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-mono font-bold">
+                                                {guessed}
+                                            </span>
+                                        )}
                                     </div>
                                     <div className="flex justify-center">
                                         <span className="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-mono font-bold">

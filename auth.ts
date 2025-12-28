@@ -37,12 +37,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 let user = await User.findOne({ username: usernameInput });
 
                 if (user) {
-                    // Fix for Tushar's CGPA requirement (User feedback)
-                    if (user.username === "tushar" && user.actualCGPA !== 9.08) {
-                        user.actualCGPA = 9.08;
-                        await user.save();
-                    }
-
                     return {
                         id: user._id.toString(),
                         name: user.username,
