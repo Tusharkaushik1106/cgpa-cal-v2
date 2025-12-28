@@ -1,0 +1,3 @@
+FOR ME AND MY PEOPLE TO CALCULATE THE CGPA IN A FUN WAY.......
+
+IF YOU WANNA TEST IT OUT use a username "tushar" and login '<3'
